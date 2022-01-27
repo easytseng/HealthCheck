@@ -22,7 +22,7 @@ var today = DateTime.Now.ToString("yyyy/MM/dd");
 
 
 
-string jsonString = File.ReadAllText("config.txt");
+string jsonString = "{\"WorkingdaySetting\": {\"EmpID\": \"16210\",\"WorkPlaceAM\": \"辦公室\",\"WorkPlacePM\": \"辦公室\",\"WorkProject\": \"顧問專案\",\"Symptom\": \"false\",\"Seat\": \"固定座位\",\"SeatNo\": \"\"},\"HolidaySetting\": {\"EmpID\": \"16210\",\"WorkPlaceAM\": \"住家\",\"WorkPlacePM\": \"住家\",\"WorkProject\": \"休/例假\",\"Symptom\": \"false\"}}";
 JObject json = JObject.Parse(jsonString);
 JObject requestJson;
 if(holidayList.Contains(today)){
